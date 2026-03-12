@@ -1,0 +1,14 @@
+.home-container {
+  animation: fadeIn 0.8s ease-in;
+}
+
+.ai-discovery-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: -30px;
+  /* Overlap slightly with the header if desired, or adjust spacing */
+  position: relative;
+  z-index: 2;
+  /* Ensure search bar sits above other elements if floating */
+}

@@ -60,6 +60,11 @@ import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 
+import Green_Leaf_Sushi from './Green_Leaf_Sushi.png'
+import Spicy_Dragon_Bowl from './Spicy_Dragon_Bowl.png'
+import The_Artisan_Crust from './The_Artisan_Crust.png'
+import Zenith_Roasters_Cafe from './Zenith_Roasters_Cafe.png'
+
 export const assets = {
     logo,
     basket_icon,
@@ -79,7 +84,11 @@ export const assets = {
     profile_icon,
     logout_icon,
     bag_icon,
-    parcel_icon
+    parcel_icon,
+    Green_Leaf_Sushi,
+    Spicy_Dragon_Bowl,
+    The_Artisan_Crust,
+    Zenith_Roasters_Cafe
 }
 
 export const menu_list = [

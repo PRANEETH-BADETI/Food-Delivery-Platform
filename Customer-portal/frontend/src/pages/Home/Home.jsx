@@ -1,19 +1,23 @@
-import Header from '../../components/Header/Header'
-import './Home.css'
-import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
-
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import Header from '../../components/Header/Header';
+import ExploreMenu from '../../components/ExploreMenu/ExploreMenu';
+import SemanticSearchBar from '../../components/SemanticSearchBar/SemanticSearchBar';
+import RestaurantRecommendations from '../../components/RestaurantRecommendations/RestaurantRecommendations';
+import './Home.css';
 
 const Home = () => {
-
   const [category, setCategory] = useState("all");
 
   return (
-    <div>
+    <div className="home-container">
       <Header />
-      <ExploreMenu category={category} setCategory={setCategory}/>
+      <div className="ai-discovery-section">
+        <SemanticSearchBar />
+        <RestaurantRecommendations />
+      </div>
+      <ExploreMenu category={category} setCategory={setCategory} />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
