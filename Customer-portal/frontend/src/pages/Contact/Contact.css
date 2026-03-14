@@ -1,0 +1,256 @@
+.contact-page {
+  padding: 40px 0;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Form Section */
+.contact-form-section {
+  flex: 1.2;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.contact-form-section h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 20px;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff5e00;
+}
+
+.submit-btn {
+  background: #ff5e00;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #e65500;
+  transform: translateY(-2px);
+}
+
+/* Developer Card Section */
+.developer-card {
+  flex: 0.8;
+  background: linear-gradient(145deg, #1f1f1f, #2d2d2d);
+  color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.dev-card-header {
+  background: rgba(255, 94, 0, 0.15);
+  padding: 15px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dev-badge {
+  color: #ff5e00;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dev-card-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dev-card-body h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  background: linear-gradient(to right, #fff, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dev-pitch {
+  color: #bbb;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.dev-pitch b {
+  color: #ff5e00;
+}
+
+.dev-highlights h4, .dev-projects h4 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tags span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #ddd;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dev-projects ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dev-projects li {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.dev-projects li::before {
+  content: '→';
+  color: #ff5e00;
+  position: absolute;
+  left: 0;
+}
+
+.dev-projects b {
+  color: #ddd;
+}
+
+.dev-contact-links {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dev-contact-links p {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.social-btn.linkedin {
+  background: #0077b5;
+  color: white;
+}
+
+.social-btn.linkedin img {
+  width: 18px;
+  filter: brightness(0) invert(1);
+}
+
+.social-btn.linkedin:hover {
+  background: #005885;
+}
+
+.social-btn.email {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.social-btn.email:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  .input-group {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -60,3 +60,49 @@
   top: -8px;
   right: -8px;
 }
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.navbar-location:hover {
+  background-color: #f8f8f8;
+}
+
+.location-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.deliver-to {
+  font-size: 0.75rem;
+  color: #ff5e00;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.current-loc {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrow {
+  font-size: 0.6rem;
+  color: #ff5e00;
+}

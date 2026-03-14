@@ -1,0 +1,168 @@
+/* Overlay background */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.drawer-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* The Drawer itself */
+.location-drawer {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Hidden off-screen by default */
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+  transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth Swiggy-like slide */
+  display: flex;
+  flex-direction: column;
+}
+
+.location-drawer.open {
+  right: 0;
+}
+
+/* Header */
+.drawer-header {
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+  padding: 5px;
+}
+
+.drawer-header h2 {
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Body */
+.drawer-body {
+  padding: 30px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Search Box */
+.search-container {
+  margin-bottom: 25px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-container input:focus {
+  border-color: #ff5e00;
+  box-shadow: 0 0 0 3px rgba(255, 94, 0, 0.1);
+}
+
+/* Locate Me Button */
+.locate-me-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: opacity 0.2s;
+}
+
+.locate-me-btn:hover {
+  opacity: 0.8;
+}
+
+.target-icon {
+  font-size: 1.5rem;
+}
+
+.locate-text h3 {
+  color: #ff5e00;
+  font-size: 1rem;
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.locate-text p {
+  color: #888;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.drawer-divider {
+  border: none;
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 25px 0;
+}
+
+/* Saved Addresses */
+.section-title {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.address-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  cursor: pointer;
+  border-bottom: 1px dashed #eee;
+  transition: transform 0.2s;
+}
+
+.address-item:hover {
+  transform: translateX(5px);
+}
+
+.address-icon {
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.address-details h3 {
+  font-size: 1rem;
+  color: #222;
+  margin: 0 0 5px 0;
+}
+
+.address-details p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}

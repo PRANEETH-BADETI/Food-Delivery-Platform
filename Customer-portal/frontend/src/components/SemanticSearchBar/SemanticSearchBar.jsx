@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import './SemanticSearchBar.css';
-import { assets } from '../../assets/assets';
+const placeholders = [
+  "Search for spicy vegan options...",
+  "What are you craving today?",
+  "High protein meals under 500 cals...",
+  "Show me the best sushi nearby..."
+];
 
 const SemanticSearchBar = () => {
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
-
-  // Dynamic placeholders for the "AI" feel
-  const placeholders = [
-    "Search for spicy vegan options...",
-    "What are you craving today?",
-    "High protein meals under 500 cals...",
-    "Show me the best sushi nearby..."
-  ];
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
 
   // Simple interval to rotate placeholders
