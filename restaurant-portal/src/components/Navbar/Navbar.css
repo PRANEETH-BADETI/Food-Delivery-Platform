@@ -1,0 +1,163 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 6px 0 24px;
+}
+
+.navbar-left,
+.navbar-menu,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left {
+  gap: 20px;
+}
+
+.mobile-menu {
+  display: none;
+  border: 0;
+  background: #fff2ee;
+  color: #ff5a1f;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  font-size: 20px;
+}
+
+.brand-mark {
+  color: #ff5a1f;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 0.95;
+}
+
+.brand-subtext {
+  color: #726878;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+.brand-location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #f5ddd4;
+  box-shadow: 0 14px 40px rgba(255, 102, 51, 0.08);
+  border-radius: 18px;
+  padding: 12px 16px;
+  color: #4b3d53;
+}
+
+.brand-location svg {
+  color: #ff6a2d;
+  font-size: 1.1rem;
+}
+
+.brand-location span {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #a79186;
+}
+
+.brand-location strong {
+  font-size: 0.96rem;
+}
+
+.navbar-menu {
+  gap: 28px;
+}
+
+.navbar-menu a {
+  color: #4f4a63;
+  font-size: 1rem;
+  position: relative;
+}
+
+.navbar-menu a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 2px;
+  background: #4f4a63;
+}
+
+.navbar-right {
+  gap: 14px;
+}
+
+.icon-button {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid #f0d6ca;
+  background: #fff;
+  color: #49557e;
+  font-size: 1.2rem;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 32px rgba(46, 28, 13, 0.06);
+}
+
+.icon-button--bag span {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: tomato;
+}
+
+.outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #f0d6ca;
+  color: #49557e;
+  border-radius: 999px;
+  padding: 12px 22px;
+  box-shadow: 0 14px 30px rgba(46, 28, 13, 0.05);
+}
+
+@media (max-width: 1120px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-menu {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 780px) {
+  .mobile-menu {
+    display: grid;
+    place-items: center;
+  }
+
+  .brand-location,
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-right {
+    width: 100%;
+  }
+
+  .outline-button {
+    flex: 1;
+  }
+}

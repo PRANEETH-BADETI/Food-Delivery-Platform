@@ -1,0 +1,16 @@
+.get-started-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.get-started-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 520px);
+}
+
+@media (max-width: 780px) {
+  .get-started-grid {
+    grid-template-columns: 1fr;
+  }
+}

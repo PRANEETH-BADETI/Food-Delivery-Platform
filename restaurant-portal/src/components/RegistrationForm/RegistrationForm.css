@@ -1,0 +1,200 @@
+.registration-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #f3e0d7;
+  border-radius: 30px;
+  box-shadow: 0 24px 60px rgba(49, 31, 15, 0.07);
+  padding: 28px;
+}
+
+.pill--soft {
+  background: #fff2ee;
+  color: #ff5a1f;
+}
+
+.section-heading h2 {
+  color: #1c1732;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.1;
+  margin-top: 10px;
+}
+
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.stepper__item {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid #efdfd7;
+  background: #fffaf8;
+}
+
+.stepper__item--active {
+  background: #fff2eb;
+  border-color: #ffb391;
+}
+
+.stepper__item--complete {
+  background: #f1fff4;
+  border-color: #bfe6c7;
+}
+
+.stepper__count {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  background: #fff;
+  color: #ff5a1f;
+  border: 1px solid currentColor;
+  flex-shrink: 0;
+}
+
+.stepper__item--complete .stepper__count {
+  color: #219653;
+}
+
+.stepper__item strong,
+.stepper__item span {
+  display: block;
+}
+
+.stepper__item span {
+  margin-top: 6px;
+  color: #7b7087;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.form-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group--wide {
+  grid-column: 1 / -1;
+}
+
+.input-group label {
+  color: #302741;
+  font-size: 0.96rem;
+  font-weight: 600;
+}
+
+.input-group input,
+.upload-field,
+.input-with-icon {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid #eedfd5;
+  background: #fffaf7;
+}
+
+.input-group input {
+  min-height: 54px;
+  padding: 0 16px;
+  color: #342d46;
+  font-size: 0.98rem;
+  outline: none;
+}
+
+.input-group input:focus,
+.segmented-control button.is-active {
+  border-color: #ff7e35;
+  box-shadow: 0 0 0 4px rgba(255, 126, 53, 0.12);
+}
+
+.input-with-icon,
+.upload-field {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  padding: 0 16px;
+  gap: 12px;
+  color: #9d7d72;
+}
+
+.input-with-icon input,
+.upload-field input {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  min-height: auto;
+  box-shadow: none;
+}
+
+.segmented-control {
+  display: flex;
+  gap: 12px;
+}
+
+.segmented-control button {
+  flex: 1;
+  min-height: 54px;
+  border-radius: 18px;
+  border: 1px solid #efdfd7;
+  background: #fffaf7;
+  color: #574a61;
+  font-size: 0.96rem;
+}
+
+.note-card {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px;
+  border-radius: 22px;
+  background: #fff6ef;
+  color: #7c5d56;
+}
+
+.note-card svg {
+  color: #ff6d2f;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (max-width: 780px) {
+  .registration-card {
+    padding: 22px;
+    border-radius: 26px;
+  }
+
+  .stepper,
+  .form-layout,
+  .form-actions {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions .secondary-button,
+  .form-actions .primary-button {
+    width: 100%;
+  }
+}

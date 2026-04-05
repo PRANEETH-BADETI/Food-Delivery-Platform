@@ -1,0 +1,117 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 20px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #f3e0d7;
+  border-radius: 30px;
+  box-shadow: 0 24px 60px rgba(49, 31, 15, 0.07);
+  padding: 24px;
+}
+
+.panel--orders,
+.panel--menu {
+  grid-column: 1 / -1;
+}
+
+.panel__header,
+.table-row,
+.driver-card,
+.menu-row,
+.health-item {
+  display: flex;
+}
+
+.panel__header {
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.panel h3 {
+  color: #1c1732;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.panel__header-icon,
+.table-row span,
+.driver-card span,
+.menu-row span,
+.health-item span {
+  color: #7a6e84;
+}
+
+.panel__header-icon {
+  font-size: 1.3rem;
+}
+
+.table-list,
+.driver-list,
+.menu-list,
+.health-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.table-row,
+.driver-card,
+.menu-row,
+.health-item {
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  border-radius: 22px;
+  background: #fffaf8;
+  border: 1px solid #efdfd7;
+}
+
+.table-row > div,
+.driver-card > div,
+.menu-row > div {
+  flex: 1;
+}
+
+.table-row strong,
+.driver-card strong,
+.menu-row strong,
+.health-item strong {
+  display: block;
+  color: #241d37;
+  margin-bottom: 6px;
+}
+
+.text-button {
+  background: transparent;
+  border: 0;
+  color: #ff612a;
+  font-weight: 600;
+  padding: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 1120px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .panel {
+    padding: 22px;
+    border-radius: 26px;
+  }
+
+  .table-row,
+  .driver-card,
+  .menu-row,
+  .health-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
