@@ -1,16 +1,29 @@
 .get-started-page {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 0;
 }
 
-.get-started-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 520px);
+.portal-entry {
+  position: relative;
 }
 
-@media (max-width: 780px) {
-  .get-started-grid {
-    grid-template-columns: 1fr;
+.portal-entry__card {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+  width: min(100% - 72px, 420px);
+}
+
+@media (max-width: 1120px) {
+  .portal-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .portal-entry__card {
+    position: static;
+    width: 100%;
   }
 }

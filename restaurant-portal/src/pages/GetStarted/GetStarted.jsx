@@ -3,23 +3,30 @@ import HeroBanner from '../../components/HeroBanner/HeroBanner'
 import GetStartedCard from '../../components/GetStartedCard/GetStartedCard'
 import './GetStarted.css'
 
-const GetStarted = ({ formData, onFieldChange, onSyncOwnerEmail }) => {
+const GetStarted = ({ formData, onFieldChange, onContinue }) => {
   const navigate = useNavigate()
 
-  const handleContinue = () => {
-    if (!formData.email.trim()) {
-      return
+  const handlePortalEntry = () => {
+    const destination = onContinue()
+    if (destination === 'register') {
+      navigate('/register')
     }
-
-    onSyncOwnerEmail()
-    navigate('/register')
+    if (destination === 'dashboard') {
+      navigate('/dashboard')
+    }
   }
 
   return (
     <main className="get-started-page">
-      <HeroBanner restaurantName={formData.restaurantName} />
-      <section className="get-started-grid">
-        <GetStartedCard email={formData.email} onFieldChange={onFieldChange} onContinue={handleContinue} />
+      <section className="portal-entry">
+        <HeroBanner />
+        <div className="portal-entry__card">
+          <GetStartedCard
+            identifier={formData.accessIdentifier}
+            onFieldChange={onFieldChange}
+            onContinue={handlePortalEntry}
+          />
+        </div>
       </section>
     </main>
   )

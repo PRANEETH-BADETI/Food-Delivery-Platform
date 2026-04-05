@@ -11,6 +11,7 @@ const Registration = ({
   onUpdateFormData,
   onNextStep,
   onPreviousStep,
+  onCompleteRegistration,
 }) => {
   const navigate = useNavigate()
 
@@ -19,6 +20,7 @@ const Registration = ({
       return
     }
 
+    onCompleteRegistration()
     navigate('/dashboard')
   }
 

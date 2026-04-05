@@ -7,7 +7,7 @@ export const stepFields = {
 }
 
 export const initialForm = {
-  email: '',
+  accessIdentifier: '',
   ownerName: '',
   restaurantName: '',
   location: '',
@@ -24,6 +24,47 @@ export const initialForm = {
   foodType: 'Pure veg',
   cuisines: '',
   menuUpload: '',
+}
+
+export const registeredPartnerIdentifiers = ['resto-101', '9876543210', 'partner@tomato.com']
+
+export const registeredPartnerProfiles = {
+  'resto-101': {
+    ownerName: 'Ritika Mehra',
+    restaurantName: 'Tomato Spice House',
+    location: 'Koramangala, Bengaluru',
+    ownerEmail: 'partner@tomato.com',
+    contactNumber: '9876543210',
+    workingDays: 'Mon-Sun',
+    openingTime: '09:00',
+    closingTime: '23:00',
+    foodType: 'Includes non-veg',
+    cuisines: 'North Indian, Chinese, Biryani',
+  },
+  '9876543210': {
+    ownerName: 'Ritika Mehra',
+    restaurantName: 'Tomato Spice House',
+    location: 'Koramangala, Bengaluru',
+    ownerEmail: 'partner@tomato.com',
+    contactNumber: '9876543210',
+    workingDays: 'Mon-Sun',
+    openingTime: '09:00',
+    closingTime: '23:00',
+    foodType: 'Includes non-veg',
+    cuisines: 'North Indian, Chinese, Biryani',
+  },
+  'partner@tomato.com': {
+    ownerName: 'Ritika Mehra',
+    restaurantName: 'Tomato Spice House',
+    location: 'Koramangala, Bengaluru',
+    ownerEmail: 'partner@tomato.com',
+    contactNumber: '9876543210',
+    workingDays: 'Mon-Sun',
+    openingTime: '09:00',
+    closingTime: '23:00',
+    foodType: 'Includes non-veg',
+    cuisines: 'North Indian, Chinese, Biryani',
+  },
 }
 
 export const registrationSteps = [
